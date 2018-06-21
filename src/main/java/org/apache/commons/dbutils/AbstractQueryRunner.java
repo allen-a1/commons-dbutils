@@ -289,7 +289,7 @@ public abstract class AbstractQueryRunner {
                                 + stmtCount + ", was given " + paramsCount);
                     }
                 }
-            } catch (final SQLFeatureNotSupportedException ex) {
+            } catch (final SQLFeatureNotSupportedException | UnsupportedOperationException ex) {
                 pmdKnownBroken = true;
             }
             // TODO see DBUTILS-117: would it make sense to catch any other SQLEx types here?
